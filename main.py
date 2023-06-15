@@ -18,8 +18,12 @@ def End():
             print("Please answer yes or no")
 
             print("Your answer is: ",end="")
-            repeat = input()
-            repeat = repeat.lower()
+            try:
+                repeat = input()
+                repeat = repeat.lower()
+            except:
+                repeat = "yes" if random.int(1,2) == 1 else "no"
+                
             match repeat:
                 case "yes":
                     return True
