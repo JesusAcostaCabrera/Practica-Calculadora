@@ -35,7 +35,7 @@ def End():
 
 #Variable Global
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     run = bool(True)
     while run is True:
@@ -55,8 +55,8 @@ if __name__ == '__main__':
                 Op = Opt.Operations(int(input("First Number: ")), int(input("Second Number: ")))
             except:
                 option = random.randint(1,4)
-                Op = Opt.Operations(random.randint(0,9),random.randint(0,9))
-                
+                Op = Opt.Operations(random.randint(1,9),random.randint(1,9))
+
             
             print("The result is:", end=" ")
 
