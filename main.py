@@ -1,9 +1,9 @@
 '''
 Aplicacion de calculadora
 '''
-
 import os
 import random
+import Opt
 
 #Limpiar Consola
 def Clear():
@@ -33,28 +33,6 @@ def End():
                     print("Please, write yes or no")
                     Clear()
 
-#Clase con todas las operaciones aritmeticas
-class Operations:
-    def __init__(self, num1, num2):
-        self.num1 = num1
-        self.num2 = num2
-
-    #Suma
-    def Sum(self):
-        return (self.num1)+(self.num2)
-    
-    #Resta
-    def Sub(self):
-        return self.num1-self.num2
-    
-    #Multiplicacion
-    def Mult(self):
-        return self.num1*self.num2
-    
-    #Division
-    def Div(self):
-        return self.num1/self.num2
-
 #Variable Global
 
 if __name__ == '__main__':
@@ -74,10 +52,10 @@ if __name__ == '__main__':
                 if option < 1 or option > 4:
                     print("You didn't choose a number between 1 and 4")
                     Clear()
-                Opt = Operations(int(input("First Number: ")), int(input("Second Number: ")))
+                Op = Opt.Operations(int(input("First Number: ")), int(input("Second Number: ")))
             except:
                 option = random.randint(1,4)
-                Opt = Operations(random.randint(0,9),random.randint(0,9))
+                Op = Opt.Operations(random.randint(0,9),random.randint(0,9))
                 
 
             print(Opt.num1)
@@ -86,13 +64,13 @@ if __name__ == '__main__':
 
             match option:
                 case 1:
-                    print(Opt.Sum())
+                    print(Op.Sum())
                 case 2:
-                    print(Opt.Sub())
+                    print(Op.Sub())
                 case 3:
-                    print(Opt.Mult())
+                    print(Op.Mult())
                 case 4:
-                    print(Opt.Div())
+                    print(Op.Div())
 
             try:
                 print("Press enter to continue.\n\n", end="")
