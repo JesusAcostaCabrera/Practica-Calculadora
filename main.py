@@ -3,6 +3,7 @@ Aplicacion de calculadora
 '''
 
 import os
+import random
 
 #Limpiar Consola
 def Clear():
@@ -64,13 +65,16 @@ if __name__ == '__main__':
             print("1. Sum               2. Substraction\n3.Multiplication     4. Division\n\n")
 
             print("Your Option is: ", end ="")
-            option = int(input())
-            if option < 1 or option > 4:
-                print("You didn't choose a number between 1 and 4")
-                Clear()
-        
-            
-            Opt = Operations(int(input("First Number: ")), int(input("Second Number: ")))
+            try:
+                option = int(input())
+                if option < 1 or option > 4:
+                    print("You didn't choose a number between 1 and 4")
+                    Clear()
+                Opt = Operations(int(input("First Number: ")), int(input("Second Number: ")))
+            except:
+                option = random.int(1,4)
+                Opt = Operations(random.int(0,9),random.int(0,9))
+                
 
             print(Opt.num1)
             
