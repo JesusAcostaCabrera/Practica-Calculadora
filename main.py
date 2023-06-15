@@ -22,7 +22,7 @@ def End():
                 repeat = input()
                 repeat = repeat.lower()
             except:
-                repeat = "yes" if random.int(1,2) == 1 else "no"
+                repeat = "yes" if random.randint(1,2) == 1 else "no"
                 
             match repeat:
                 case "yes":
@@ -76,8 +76,8 @@ if __name__ == '__main__':
                     Clear()
                 Opt = Operations(int(input("First Number: ")), int(input("Second Number: ")))
             except:
-                option = random.int(1,4)
-                Opt = Operations(random.int(0,9),random.int(0,9))
+                option = random.randint(1,4)
+                Opt = Operations(random.randint(0,9),random.randint(0,9))
                 
 
             print(Opt.num1)
