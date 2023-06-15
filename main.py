@@ -93,9 +93,13 @@ if __name__ == '__main__':
                     print(Opt.Mult())
                 case 4:
                     print(Opt.Div())
-        
-            print("Press enter to continue.\n\n", end="")
-            input()
+
+            try:
+                print("Press enter to continue.\n\n", end="")
+                input()
+            except:
+                print()                
+
             os.system("cls")
 
             run = End()                    
