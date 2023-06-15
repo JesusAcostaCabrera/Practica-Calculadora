@@ -24,5 +24,7 @@ jobs:
         pip install -r requirements.txt
     - name: Compilación
       run: python3 main.py
+    - name: Pruebas
+      run: pytest testing.py
     - name: Analisis estilo (lint)
       run: pylint main.py
