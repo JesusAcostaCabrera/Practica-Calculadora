@@ -57,8 +57,6 @@ if __name__ == '__main__':
                 option = random.randint(1,4)
                 Op = Opt.Operations(random.randint(0,9),random.randint(0,9))
                 
-
-            print(Opt.num1)
             
             print("The result is:", end=" ")
 
