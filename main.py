@@ -13,7 +13,7 @@ def Clear():
 #Asegurrase de que quiere salir
 def End():
     repeat = ""
-    while repeat != "yes" and repeat != "no":
+    while repeat in ("yes", "no"):
             print("¿Do you want to use another function?\n")
             print("Please answer yes or no")
 
