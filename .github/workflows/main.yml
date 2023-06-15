@@ -1,11 +1,6 @@
 name: Pylint
 
-on:
-  push:
-    branches:
-      - master
-      - Select
-      - WorkFlowTesting
+on: [push]
 
 jobs:
   build:
